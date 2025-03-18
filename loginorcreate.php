@@ -21,6 +21,7 @@
 	</form>
 
 	<form action="create.php" method="POST">
+		<p2> If you don't have an account click here </p2>
 		<p><input type="submit" value="Create an account" name="account"></p>
 	</form>
 </body>

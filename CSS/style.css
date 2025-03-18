@@ -6,10 +6,17 @@ body{
 }
 
 p{
-    
+
     text-align: center;
     max-width: 500px; 
     padding: 10px; 
     border-radius: 8px; 
     font-size: 25px;
 }
+
+form {
+    display: block;
+    width: 100%;  /* Ensures forms take the full width */
+    margin-bottom: 20px; /* Adds spacing between forms */
+}
+
