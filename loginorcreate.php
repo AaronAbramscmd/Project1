@@ -1,5 +1,26 @@
 <?php
+$password = '';
+$message ='';
+function is_password(string $password): bool
+{
+	if (
+	    mb_strlen($password) >= 12
+	    and preg_match('/[A-Z]/', $password)
+	    and preg_match('/[a-z]/', $password)
+	    and preg_match('/[0-9]/', $password)
 
+	) {
+		return true;
+	}
+	return false;
+}
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+	$password = $_POST['password'];
+	$valid = is_password($password);
+	$message = $valid ? 'Password is valid' :
+			'password is not strong enough';
+}
 
 
 ?>
