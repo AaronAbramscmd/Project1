@@ -1,0 +1,49 @@
+li3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+li {
+	
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px;
+	margin: 8px;
+
+
+}
+
+li2 {
+	padding: 8px;
+	margin: 8px;
+	position: absolute;
+	right: 0;
+}
+
+ul {
+	list-style: none;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+}
+
+
+.exam img {
+  display: block; 
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+p {
+	text-align: center;
+
+}
