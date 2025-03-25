@@ -11,12 +11,14 @@
 	<link rel="stylesheet" type="text/css" href="CSS/color.css">
 </head>
 <body>
+	<img src="Pictures/logo3.gif">
 	<form action="loginorcreate.php" method="POST">
 		<h2> Create an account </h2>
-		<p> Email: <input type="text" name="email"></p>
-		<p> First Name: <input type="text" name="fname"></p>
-		<p> Last Name: <input type="text" name="lname"></p>
-		<p> Password: <input type="password" name="password"></p>
+		<p> ID: <input type="number" name="id" placeholder="ID"> </p>
+		<p> Email: <input type="text" name="email" placeholder="Email"></p>
+		<p> First Name: <input type="text" name="fname" placeholder="First Name"></p>
+		<p> Last Name: <input type="text" name="lname" placeholder="Last Name"></p>
+		<p> Password: <input type="password" name="password" placeholder="Password"></p>
 		<p> Do you accept the terms and conditions <input type="checkbox" name="term"> </p>
 		<p> <input type="submit" value="Create an account" name="Submit"></p>
 	</form>

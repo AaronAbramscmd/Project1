@@ -1,8 +1,8 @@
 body{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: ghostwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ghostwhite;
 
 }
 
@@ -35,5 +35,14 @@ img {
     height: 150px;
 }
 
+
+.logo {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    padding: 0px;
+    width: 20px;
+    height: auto; 
+}
 
 

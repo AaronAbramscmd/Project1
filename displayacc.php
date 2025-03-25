@@ -19,6 +19,7 @@ $members 	= $statement ->fetchAll();
 			<?php echo $member['FirstName'] ?>
 			<?php echo $member['LastName'] ?>
 			<?php echo $member['Email'] ?>
+			<?php echo $member['Password'] ?>
 		</p>
 	<?php } ?>
 

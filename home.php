@@ -11,7 +11,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home Page</title>
-	<link rel="stylesheet" type="text/css" href="CSS/decor.css">
+	<link rel="stylesheet" type="text/css" href="CSS/dec.css">
 </head>
 <body>
 	<nav>
@@ -24,12 +24,13 @@
 	</nav>
 	<div class="exam-cont">
 		<a href="exam.php">
-			<p> Click on me to take test </p>
 			<div class="exam"> 
-				<img src="Pictures/exam.png" width="200px"> 
+				<img src="Pictures/exam.png" width="200px">
+				<p> Click on me to take test </p> 
 			</div>
 		</a>
 	</div>
+	<div class="rectangle"></div>
 
 </body>
 </html>

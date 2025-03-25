@@ -16,9 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="utf-8">
     <title>Exam Login</title>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/sty.css">
 </head>
 <body>
+    <nav>
+        <div class="logo"> 
+            <img src="Pictures/logo3.gif">
+        </div>
+    </nav>
 
     <form action="loginorcreate.php" method="POST">
         <img src="Pictures/icon.png">
@@ -27,6 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><button type="submit" name="action" value="login">Login</button></p>
         <p><button type="submit" name="action" value="create">Create an Account</button></p>
     </form>
+
+
 
 </body>
 </html>
