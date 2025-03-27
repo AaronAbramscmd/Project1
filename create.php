@@ -12,7 +12,7 @@
 </head>
 <body>
 	<img src="Pictures/logo3.gif">
-	<form action="loginorcreate.php" method="POST">
+	<form action="addstudent.php" method="POST">
 		<h2> Create an account </h2>
 		<p> ID: <input type="number" name="id" placeholder="ID"> </p>
 		<p> Email: <input type="text" name="email" placeholder="Email"></p>

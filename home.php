@@ -11,7 +11,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home Page</title>
-	<link rel="stylesheet" type="text/css" href="CSS/dec.css">
+	<link rel="stylesheet" type="text/css" href="CSS/deco.css">
 </head>
 <body>
 	<nav>

@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_POST['action'] == "login") {
             header("Location: home.php");
         } elseif ($_POST['action'] == "create") {
-            header("Location: create.php");
+            header("Location: create.html");
         }
         exit();
     }

@@ -1,20 +1,11 @@
-<?php
+<?php  
 require 'connection.php';
-$sql = "INSERT INTO student(id, email, fname, lname, password)
-		VALUES($_POST[id], '$_POST[email]', '$_POST[fname]',
-			$_POST[lname],'$_POST[password]');";
-$statement = $pdo-> query($sql);
-$members   = $statement -> fetchAll();
 
 
-
-
-$sql2		=  "SELECT *
-				FROM Account;";
-$statement  = $pdo->query($sql2);
-$members    = $statement-> fetchAll();
-
-
+$sql		= "SELECT *
+			    FROM account;";
+$statement 	= $pdo->query($sql);
+$members 	= $statement -> fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +35,7 @@ $members    = $statement-> fetchAll();
 	  		<tr>
 	  			<th>ID</th>
 	  			<th>First Name</th>
-	  			<th>Las Name</th>
+	  			<th>Last Name</th>
 	  			<th>Email</th>
 	  			<th>Password</th>
 	  		</tr>
@@ -61,5 +52,11 @@ $members    = $statement-> fetchAll();
 	  		<?php } ?>
 	  	</tbody>
 	  </table>
+	  <p>
+	  	<?php
+	  	message();
+	  	?>
+	  </p>
+
 </body>
 </html>

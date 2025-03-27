@@ -42,7 +42,9 @@ a {
 }
 
 .exam p {
-    font-family: "Papyrus", "Comic Sans MS", fantasy, serif;
+    font-family: "fantasy;", "Comic Sans MS", fantasy, serif;
+    text-align: center;
+    font-size: 15px;
 }
 
 
