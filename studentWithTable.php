@@ -44,9 +44,9 @@ $members 	= $statement -> fetchAll();
 	  		<?php foreach ($members as $member) { ?>
 	  		<tr>
 	  		  <td><?php echo $member['ID']; ?></td>
-	  		  <td><?php echo $member['Email']; ?></td>
 	  		  <td><?php echo $member['FirstName']; ?></td>
 	  		  <td><?php echo $member['LastName']; ?></td>
+	  		  <td><?php echo $member['Email']; ?></td>
 	  		  <td><?php echo $member['Password']; ?></td>
 	  		</tr>
 	  		<?php } ?>

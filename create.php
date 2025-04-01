@@ -1,4 +1,25 @@
 <?php
+session_start();
+
+include "connection.php";  // Make sure the database connection is working properly
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['action'])) {
+        if ($_POST['action'] == "login") {
+            // Assuming you validate the user's credentials here with the database
+
+            // Set session variable when the user logs in
+            $_SESSION['FirstName'] = $_POST['fname'];  // Store the first name in the session
+
+            // Redirect to home.php
+            header("Location: home.php");
+            exit();  // Make sure to call exit() after redirect to stop further execution
+        } elseif ($_POST['action'] == "create") {
+            header("Location: create.php");
+            exit();
+        }
+    }
+}
 
 ?>
 
@@ -12,7 +33,7 @@
 </head>
 <body>
 	<img src="Pictures/logo3.gif">
-	<form action="addstudent.php" method="POST">
+	<form action="addStudent.php" method="POST">
 		<h2> Create an account </h2>
 		<p> ID: <input type="number" name="id" placeholder="ID"> </p>
 		<p> Email: <input type="text" name="email" placeholder="Email"></p>

@@ -1,3 +1,9 @@
+.greet {
+	color: black;
+	text-align: center;
+}
+
+
 li3 {
 	position: absolute;
 	top: 0;
@@ -61,7 +67,7 @@ a {
 
 .rectangle {
   position: fixed;
-  top: 36.5%;
+  top: 41.95%;
   left: 43.9%;
   width: 11.84%; 
   height: 20%; 

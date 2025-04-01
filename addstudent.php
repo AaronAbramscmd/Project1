@@ -1,8 +1,8 @@
 <?php
 require 'connection.php';
-$sql = "INSERT INTO student(id, email, fname, lname, password)
-		VALUES($_POST[id], '$_POST[email]', '$_POST[fname]',
-			$_POST[lname],'$_POST[password]');";
+$sql = "INSERT INTO account(ID, FirstName, LastName, Email, Password)
+		VALUES($_POST[id], '$_POST[fname]', '$_POST[lname]',
+			'$_POST[email]','$_POST[password]');";
 $statement = $pdo-> query($sql);
 $members   = $statement -> fetchAll();
 
@@ -10,10 +10,13 @@ $members   = $statement -> fetchAll();
 
 
 $sql2		=  "SELECT *
-				FROM Account;";
+				FROM account;";
 $statement  = $pdo->query($sql2);
 $members    = $statement-> fetchAll();
 
+
+header("Location: loginorcreate.php");
+	exit();
 
 ?>
 
@@ -44,7 +47,7 @@ $members    = $statement-> fetchAll();
 	  		<tr>
 	  			<th>ID</th>
 	  			<th>First Name</th>
-	  			<th>Las Name</th>
+	  			<th>Last Name</th>
 	  			<th>Email</th>
 	  			<th>Password</th>
 	  		</tr>
@@ -53,9 +56,9 @@ $members    = $statement-> fetchAll();
 	  		<?php foreach ($members as $member) { ?>
 	  		<tr>
 	  		  <td><?php echo $member['ID']; ?></td>
-	  		  <td><?php echo $member['Email']; ?></td>
 	  		  <td><?php echo $member['FirstName']; ?></td>
 	  		  <td><?php echo $member['LastName']; ?></td>
+	  		  <td><?php echo $member['Email']; ?></td>
 	  		  <td><?php echo $member['Password']; ?></td>
 	  		</tr>
 	  		<?php } ?>
