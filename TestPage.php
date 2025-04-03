@@ -1,9 +1,44 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CITA 355 Exam</title>
+    <style>
+        h1, h2, p {
+            text-align: center;
+        }
+
+        body {
+            background-color: ghostwhite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        div {
+            text-align: center;
+            width: 500px;
+            border: 3px solid #000000;
+            background: #fff;
+            border-radius: 15px;
+            margin: 20px auto;
+            padding: 15px;
+        }
+
+        button {
+            position: absolute;
+            align-content: center;
+            right: 48%;
+        }
+    </style>
 </head>
 <body>
     <header>

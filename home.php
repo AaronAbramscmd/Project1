@@ -28,9 +28,9 @@ if ($_POST['action'] == "login") {
 <body>
 	<nav>
 		<ul>
-			<li>  <a href="exam.php">Take Exam</a></li>
+			<li>  <a href="TestPage.php">Take Exam</a></li>
 			<li> <a href="creators.php">Creators</a> </li> 
-			<li2> <a href="loginorcreate.php">Logout</a> </li2>
+			<li2> <a href="logout.php">Logout</a> </li2>
 			<li3> <img src="Pictures/logo3.gif">  </li3>
 		</ul>
 	</nav>
@@ -39,7 +39,7 @@ if ($_POST['action'] == "login") {
 	</div>
 
 	<div class="exam-cont">
-		<a href="exam.php">
+		<a href="TestPage.php">
 			<div class="exam"> 
 				<img src="Pictures/exam.png" width="200px">
 				<p> Click on me to take test </p> 
