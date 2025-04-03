@@ -7,7 +7,7 @@ require 'connection.php'; // Ensure this file contains your PDO connection
 $correct_answers = [
     "question_1" => "To test a condition to determine whether or not to run a code block.",
     "question_2" => "echo",
-    "question_3" => "$_POST",
+    "question_3" => '$_POST',
     "question_4" => "session_start()",
     "question_5" => "mysqli_connect()"
 ];
