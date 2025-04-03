@@ -1,25 +1,9 @@
 <?php
-session_start();
+session_start(); // Starts session
 
 include "connection.php";  // Make sure the database connection is working properly
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['action'])) {
-        if ($_POST['action'] == "login") {
-            // Assuming you validate the user's credentials here with the database
 
-            // Set session variable when the user logs in
-            $_SESSION['FirstName'] = $_POST['fname'];  // Store the first name in the session
-
-            // Redirect to home.php
-            header("Location: home.php");
-            exit();  // Make sure to call exit() after redirect to stop further execution
-        } elseif ($_POST['action'] == "create") {
-            header("Location: create.php");
-            exit();
-        }
-    }
-}
 
 ?>
 

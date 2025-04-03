@@ -25,21 +25,22 @@ foreach ($correct_answers as $q => $ans) {
 
 // Store score in the database using PDO
 $score = ($correct / $total) * 100;
-$stmt = $pdo->prepare("INSERT INTO results (score) VALUES (:score)");
-$stmt->execute(['score' => $score]);
+//$stmt = $pdo->prepare("INSERT INTO results (score) VALUES (:score)");
+//$stmt->execute(['score' => $score]);
 
 // Display results
 echo "<h1>Exam Results</h1><p>Score: <strong>$score%</strong></p><h2>Review:</h2>";
 
 foreach ($correct_answers as $q => $ans) {
     $user_ans = $_POST[$q];
-    echo "<p><strong>$q:</strong> Your Answer: " . htmlspecialchars($user_ans) . 
-         "<br>Correct: " . htmlspecialchars($ans) . 
+    echo "<p><strong>$q:</strong> Your Answer: " . htmlspecialchars($user_ans) .
+         "<br>Correct: " . htmlspecialchars($ans) .
          "<br>" . ($user_ans === $ans ? "<span style='color:green;'>Correct</span>" : "<span style='color:red;'>Incorrect</span>") . "</p>";
 }
+
 ?>
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">

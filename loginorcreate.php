@@ -1,25 +1,30 @@
 <?php
-session_start();
- $_SESSION['FirstName'] = $_POST['fname'];
+session_start(); // Start session
+
+
+ $_SESSION['FirstName'] = $_POST['fname']; // Stores the first name in the session
 
 include "connection.php";  // Make sure the database connection is working properly
 
 
-
+// Declare variables to hold the error messages
 $IDerr = $FirstNameErr = $PasswordErr = "";
 $ID = $FirstName = $Password = "";
 
 
-
+// Check if form submited with POST
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
+    // Action vaule is set in the form
     if (isset($_POST['action'])) {
+        // Makes sure ID isn't empty
         if (empty($_POST["ID"])) {
         $IDerr = "* ID is required";
     } else {
-        $ID = trim($_POST['ID']);
-        $ID = stripcslashes($ID);
-        $ID = htmlspecialchars($ID);
+        // Looked this up on W3Schools
+        $ID = trim($_POST['ID']); // Removes whitespaces and other characters from both sides
+        $ID = stripcslashes($ID); // Removes backslashes
+        
     }
 
     if (empty($_POST['fname'])) {
@@ -27,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     } else {
         $FirstName = trim($_POST['fname']);
         $FirstName = stripcslashes($FirstName);
-        $FirstName = htmlspecialchars($FirstName);
+       
     }
 
     if (empty($_POST["password"]) || mb_strlen($_POST['password']) < 8) {
@@ -35,11 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     } else {
         $Password = trim($_POST['password']);
         $Password = stripcslashes($Password);
-        $Password = htmlspecialchars($Password);
+        
     }
 
 }
-
+        // If no error can log in and goes to home page
         if (empty($IDerr) && empty($FirstNameErr) && empty($PasswordErr)) {
             if ($_POST['action'] == "login") {
                 header("Location: home.php");
@@ -47,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             }
     }
      
-
+    // If clicked create button will go to the create page
     elseif ($_POST['action'] == "create") {
         echo "Create Account";
         header("Location: create.php");

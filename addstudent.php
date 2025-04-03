@@ -1,6 +1,6 @@
 <?php
 require 'connection.php';
-$sql = "INSERT INTO account(ID, FirstName, LastName, Email, Password)
+$sql = "INSERT INTO account(ID, FirstName, LastName, email, Password)
 		VALUES($_POST[id], '$_POST[fname]', '$_POST[lname]',
 			'$_POST[email]','$_POST[password]');";
 $statement = $pdo-> query($sql);

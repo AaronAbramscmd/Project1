@@ -1,13 +1,9 @@
 <?php 
-session_start();
-include "connection.php";
+session_start(); // Session starts
+
+include "connection.php"; // Include database connection
 
 
-if ($_POST['action'] == "login") {
-    $_SESSION['FirstName'] = $_POST['fname'];  // Assuming 'fname' is the first name field
-    header("Location: home.php");
-    exit();
-}
 
 ?>
 
